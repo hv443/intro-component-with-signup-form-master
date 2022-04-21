@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+@mixin displayCenter($JC,$direction) {
+    display: flex;
+    align-items: center;
+    justify-content: $JC;
+    flex-direction: $direction;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button{
+
+    @include displayCenter(center,column );
+
+    width: 100%;
+    font-family: poppins;
+    color: white;
+    padding: 1rem 0;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    
+
+}
+
+body{
+    font-family: Poppins,sans-serif;
+    font-size: 14px;
+    width: 100%;
+    color: white;
+}
+
+main{
+
+    @include displayCenter(center,column);
+
+    background: url(/images/bg-intro-mobile.png) no-repeat hsl(0, 100%, 74%) ;
+
+    @media screen and (min-width:800px) {
+
+       background: url(/images/bg-intro-desktop.png) no-repeat hsl(0, 100%, 74%) ;
+    
+    }
+
+    width: 100%;
+    height: 100vh
+}
+
+.container{
+
+
+    @include displayCenter(center,column);
+
+    @media screen and (min-width:800px) {
+
+        @include displayCenter(space-between,row );
+        width:90%;
+        padding: 0;
+    
+    }
+
+    @media screen and (min-width:1200px) {
+
+        @include displayCenter(space-evenly,row );
+
+      width: 80%;
+      padding: 0;
+
+    }
+
+    padding: 0 1rem ;
+}
+
+.top-text{
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @media screen and (min-width:800px) {
+
+       text-align: left;
+       max-width: 475px;
+    }
+
+    h1{
+        margin-bottom: 1rem;
+
+        @media screen and (min-width:800px) {
+
+           font-size: 40px;
+           line-height: 2.5rem;
+           margin-bottom: 2rem;
+         }
+        
+    }
+
+    p{
+        color: hsl(247, 59%, 94%);
+    }
+}
+
+.subscription-btn{
+    background-color:  hsl(248, 32%, 49%);
+    margin-bottom: 2rem;
+    box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.238);
+
+    p{
+        width:200px;
+    }
+
+    @media screen and (min-width:800px) {
+        margin-bottom: 1rem;
+
+        p{
+            width: 100%
+        }
+     }
+}
+
+
+form{
+
+    @include displayCenter(center,column );
+
+    box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.238);
+
+    background-color: white;
+    color:hsl(246, 25%, 77%);
+    border-radius: .5rem;
+    padding: 1.5rem;
+
+    div{
+        width: 100%;
+        margin-bottom: 1rem;
+        
+
+        p{
+            width: 100%;
+            text-align: right;
+            margin-top: .2rem;
+            color: hsl(0, 100%, 74%) ;
+            font-weight: 500;
+            display: none;
+        }
+    }
+
+    input{
+        width: 100%;
+        padding: .8rem ;
+        border: 1px solid hsl(246, 25%, 77%);
+        border-radius: .3rem;
+
+        outline: none;
+
+    }
+    
+  
+
+    .claim-btn{
+        background-color: hsl(154, 59%, 51%);
+        border-radius: .3rem;
+        margin-bottom: 1rem;
+        box-shadow:inset 0px -4px 2px rgba(0, 0, 0, 0.238);
+      
+    }
+
+    p{
+        font-size: 12px;
+        text-align: center;
+        width: 90%;
+
+        a{
+            text-decoration: none;
+        }
+
+        span{
+            color: hsl(0, 100%, 74%) ;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.right-section{
+    @media screen and (min-width:800px) {
+        min-width: 350px;
+        margin-left: 2rem;
+
+     }
+
+     @media screen and (min-width:1200px) {
+       width: 550px;
+
+     }
+}
+
+
+
+.active{
+    outline:1px solid  hsl(248, 32%, 49%);
+}
+
+
+
+.input-error{
+    background: url(/images/icon-error.svg) no-repeat center;
+    background-position-x:95%;
+    outline: 2px solid hsl(0, 100%, 74%) ;
+}
+
+.error-text .error{
+    display: block;
+}
