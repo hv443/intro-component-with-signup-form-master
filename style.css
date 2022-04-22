@@ -98,6 +98,9 @@ main {
   margin-bottom: 2rem;
   box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.238);
 }
+.subscription-btn:hover {
+  background-color: hsl(248deg, 42%, 61%);
+}
 .subscription-btn p {
   width: 200px;
 }
@@ -140,11 +143,18 @@ form input {
   border-radius: 0.3rem;
   outline: none;
 }
+form input[placeholder] {
+  font-weight: 600;
+  color: hsl(249deg, 10%, 26%);
+}
 form .claim-btn {
   background-color: hsl(154deg, 59%, 51%);
   border-radius: 0.3rem;
   margin-bottom: 1rem;
   box-shadow: inset 0px -4px 2px rgba(0, 0, 0, 0.238);
+}
+form .claim-btn:hover {
+  background-color: hsla(154deg, 59%, 51%, 0.568);
 }
 form p {
   font-size: 12px;
