@@ -1,9 +1,18 @@
 const inputs = document.querySelectorAll('.input')
 const submit = document.getElementById('claimBtn')
+const form = document.querySelector('form')
 
 
 var mailformat =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;;
 
+
+submit.addEventListener('click',e=>{
+    e.preventDefault()
+  
+
+    inputValue()
+
+})
 
 inputs.forEach(e=>{
     e.addEventListener('click',()=>{
@@ -17,14 +26,9 @@ inputs.forEach(e=>{
         })
        
 
-        inputs.forEach(e=>{
-            e.addEventListener('blur',()=>{
-
-            })
-        })
 
         
-        submit.addEventListener('click',()=>{
+function inputValue(){
 
                
 
@@ -55,12 +59,18 @@ inputs.forEach(e=>{
             if(!inputs[2].value.match(mailformat)){
                 inputs[2].classList.add('input-error')
                 inputs[2].parentNode.classList.add('error-text')
+                inputs[2].style.color=" hsl(0, 100%, 74%) "
             }
             else{
               
                 inputs[2].classList.remove('input-error')
                 inputs[2].parentNode.classList.remove('error-text')
+                inputs[2].style.color='black'
+            }
 
+
+            if(inputs[2].value ===''){
+                inputs[2].style.color='hsl(249, 10%, 26%)'
             }
 
             
@@ -83,7 +93,10 @@ inputs.forEach(e=>{
             })
            
 
-        })
+ }
+
+
+
 
 
 

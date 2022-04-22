@@ -44,9 +44,9 @@ main{
 
     background: url(/images/bg-intro-mobile.png) no-repeat hsl(0, 100%, 74%) ;
 
-    @media screen and (min-width:800px) {
-
-       background: url(/images/bg-intro-desktop.png) no-repeat hsl(0, 100%, 74%) ;
+    @media screen and (min-width:650px) {
+        height: 100vh;
+        background: url(/images/bg-intro-desktop.png) no-repeat hsl(0, 100%, 74%) ;
     
     }
 
