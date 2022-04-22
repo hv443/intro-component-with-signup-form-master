@@ -52,12 +52,14 @@ inputs.forEach(e=>{
             }
 
 
-            if(inputs[2].value.match(mailformat)){
-            
-            }
-            else{
+            if(!inputs[2].value.match(mailformat)){
                 inputs[2].classList.add('input-error')
                 inputs[2].parentNode.classList.add('error-text')
+            }
+            else{
+              
+                inputs[2].classList.remove('input-error')
+                inputs[2].parentNode.classList.remove('error-text')
 
             }
 
