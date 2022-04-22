@@ -33,7 +33,7 @@ main {
   flex-direction: column;
   background: url(/images/bg-intro-mobile.png) no-repeat hsl(0deg, 100%, 74%);
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 @media screen and (min-width: 800px) {
   main {
@@ -46,8 +46,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2rem 1rem;
-  height: 100vh;
+  padding: 4rem 1rem;
 }
 @media screen and (min-width: 800px) {
   .container {
