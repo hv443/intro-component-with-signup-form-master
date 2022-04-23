@@ -184,13 +184,13 @@ form p span {
 }
 
 .active {
-  outline: 1px solid hsl(248deg, 32%, 49%);
+  border: 2px solid hsl(248deg, 32%, 49%);
 }
 
 .input-error {
   background: url(/images/icon-error.svg) no-repeat center;
   background-position-x: 95%;
-  outline: 2px solid hsl(0deg, 100%, 74%);
+  border: 2px solid hsl(0deg, 100%, 74%);
 }
 
 .error-text .error {

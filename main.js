@@ -9,7 +9,6 @@ var mailformat =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-
 submit.addEventListener('click',e=>{
     e.preventDefault()
   
-
     inputValue()
 
 })
@@ -24,8 +23,13 @@ inputs.forEach(e=>{
 
          })
         })
-       
 
+       
+function clearForm(){
+    inputs.forEach(e=>{
+        e.value = ""
+    })
+}
 
         
 function inputValue(){
@@ -90,8 +94,8 @@ function inputValue(){
 
             inputs.forEach(e=>{
                 e.classList.remove('active')
-            })
-           
+            })  
+            
 
  }
 
